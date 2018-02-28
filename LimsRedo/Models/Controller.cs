@@ -25,5 +25,13 @@ namespace LimsRedo
         {
             return databaseReader.GetSampleByID(sampleID);
         }
+        public bool CanConvertToDouble(string str)
+        {
+            return StringToDouble.CanConvertToDouble(str);
+        }
+        public double ConvertToDouble(string str)
+        {
+            return StringToDouble.ConvertToDouble(str);
+        }
     }
 }

@@ -59,8 +59,14 @@ namespace LimsRedo.Views
 
             if(searchParameter == "ID")
             {
-                int idValue = Convert.ToInt32(searchValue);
-                resultList = controller.GetSampleByID(idValue);
+                if (controller.CanConvertToDouble(searchValue))//if it converts to double it converts to int.
+                {
+                    resultList = controller.GetSampleByID(Convert.ToInt32(searchValue));
+                }
+                else
+                {
+                    //errorMsg wrong format
+                }
             }
             else
             {
@@ -72,7 +78,7 @@ namespace LimsRedo.Views
 
         private void MenuBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            PageSwitcher.Switch(new MainMenuView());
         }
     }
 }
