@@ -1,19 +1,7 @@
-﻿using LimsRedo.ViewModels;
-using LimsRedo.Views;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using LimsRedo.Views;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using LimsRedo.ViewModels;
 
 namespace LimsRedo
 {
@@ -25,8 +13,8 @@ namespace LimsRedo
         public MainWindow()
         {
             InitializeComponent();
-            Switcher.mainWindow = this;
-            Switcher.Switch(new MainMenuView());
+            PageSwitcher.mainWindow = this;
+            PageSwitcher.Switch(new MainMenuView());
         }
 
         public void Navigate(UserControl nextPage)

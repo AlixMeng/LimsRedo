@@ -6,12 +6,7 @@ using System.Threading.Tasks;
 
 namespace LimsRedo.ViewModels
 {
-    public class EnterDataViewModel
+    class EnterDataViewModel
     {
-        MainViewModel mvm;
-        public EnterDataViewModel(MainViewModel _mvm)
-        {
-            mvm = _mvm;
-        }
     }
 }

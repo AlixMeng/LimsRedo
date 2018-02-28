@@ -23,6 +23,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -80,10 +81,7 @@
     <Compile Include="Models\DatabaseReader.cs" />
     <Compile Include="Models\DatabaseWriter.cs" />
     <Compile Include="PageSwitcher.cs" />
-    <Compile Include="Switcher.cs" />
     <Compile Include="ViewModels\EnterDataViewModel.cs" />
-    <Compile Include="ViewModels\GetDataViewModel.cs" />
-    <Compile Include="ViewModels\MainViewModel.cs" />
     <Compile Include="Views\EnterDataView.xaml.cs">
       <DependentUpon>EnterDataView.xaml</DependentUpon>
     </Compile>

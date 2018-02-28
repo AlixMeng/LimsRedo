@@ -43,6 +43,7 @@
             <TextBox x:Name="SpecialText1" HorizontalAlignment="Left" TextAlignment="Left" Height="23" Margin="367,126,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
             <TextBox x:Name="SpecialText2" HorizontalAlignment="Left" TextAlignment="Left" Height="23" Margin="367,154,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
             <TextBox x:Name="SpecialText3" HorizontalAlignment="Left" TextAlignment="Left" Height="23" Margin="367,182,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="140"/>
+            <Button x:Name="AddSampleBtn" Content="Add Sample" HorizontalAlignment="Left" Margin="423,238,0,0" VerticalAlignment="Top" Width="83" Height="23"/>
         </Grid>
     </Grid>
 </UserControl>
