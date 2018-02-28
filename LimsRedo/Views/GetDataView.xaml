@@ -6,8 +6,24 @@
              xmlns:local="clr-namespace:LimsRedo.Views"
              mc:Ignorable="d" 
              d:DesignHeight="300" d:DesignWidth="525">
+
     <Grid>
-        <ComboBox x:Name="SearchTypeCombo" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="29,22,0,0" VerticalAlignment="Top" Width="103" SelectionChanged="SearchTypeCombo_SelectionChanged">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="1*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="1*" />
+            <RowDefinition Height="0.7*" />
+        </Grid.RowDefinitions>
+
+        <ComboBox Grid.Row="0" Grid.Column="0" Name="SearchTypeCombo" HorizontalAlignment="Right" VerticalAlignment="Center"  Width="103" SelectionChanged="SearchTypeCombo_SelectionChanged">
             <ComboBoxItem x:Name="IDCombo" Content="ID"/>
             <ComboBoxItem x:Name="InitialsCombo" Content="Initials"/>
             <ComboBoxItem x:Name="PICombo" Content="PI value"/>
@@ -16,9 +32,9 @@
             <ComboBoxItem x:Name="ConditionCombo" Content="Condition" />
             <ComboBoxItem x:Name="AntibodyCombo" Content="Antibody" />
         </ComboBox>
-        <TextBox x:Name="SearchValueTxt" HorizontalAlignment="Left" Height="23" Margin="132,22,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="273"/>
-        <ListBox x:Name="ResultListBox" HorizontalAlignment="Left" Height="198" Margin="29,61,0,0" VerticalAlignment="Top" Width="460"/>
-        <Button x:Name="SearchBtn" Content="Search" HorizontalAlignment="Left" Margin="408,21,0,0" VerticalAlignment="Top" Width="84" Height="24" Click="SearchBtn_Click"/>
-        <Button x:Name="MenuBtn" Content="Menu" HorizontalAlignment="Left" Margin="414,264,0,0" VerticalAlignment="Top" Width="75" Click="MenuBtn_Click"/>
+        <TextBox Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" x:Name="SearchValueTxt"  Height="23" VerticalAlignment="Center" TextWrapping="Wrap"/>
+        <ListBox Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="5" Grid.RowSpan="3" x:Name="ResultListBox" HorizontalAlignment="Stretch" Margin="20,0,20,0" VerticalAlignment="Stretch"/>
+        <Button Grid.Row="0" Grid.Column="4" x:Name="SearchBtn" Content="Search" HorizontalAlignment="Left" VerticalAlignment="Center" Width="84" Height="24" Click="SearchBtn_Click"/>
+        <Button Grid.Row="5" Grid.Column="4"  x:Name="MenuBtn" Content="Menu" HorizontalAlignment="Center" Margin="0,15,0,0" VerticalAlignment="Top" Width="75" Click="MenuBtn_Click"/>
     </Grid>
 </UserControl>

@@ -18,7 +18,7 @@ namespace LimsRedo.Views
         private void AtacCombo_Selected(object sender, RoutedEventArgs e)
         {
             sampleType = 1;
-            SpecialLabel1.Content = "Transposas Unit";
+            SpecialLabel1.Content = "Transposase Unit";
             SpecialLabel2.Content = "PCR Cycles";
             //trans-pcr
         }
@@ -48,7 +48,7 @@ namespace LimsRedo.Views
             //prepType-rin
         }
 
-        private void ShowCommonEntry()
+        private void AdaptInterfaceToSampleType()
         {
             GenomeTypeLabel.Visibility = Visibility.Visible;
             GenomeTypeText.Visibility = Visibility.Visible;
@@ -69,6 +69,21 @@ namespace LimsRedo.Views
             CommentsLabel.Visibility = Visibility.Visible;
             CommentsText.Visibility = Visibility.Visible;
             AddSampleBtn.Visibility = Visibility.Visible;
+
+            SpecialLabel1.Visibility = Visibility.Visible;
+            SpecialLabel2.Visibility = Visibility.Visible;
+            SpecialText1.Visibility = Visibility.Visible;
+            SpecialText2.Visibility = Visibility.Visible;
+            if (sampleType != 2)
+            {
+                SpecialLabel3.Visibility = Visibility.Hidden;
+                SpecialText3.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                SpecialLabel3.Visibility = Visibility.Visible;
+                SpecialText3.Visibility = Visibility.Visible;
+            }
         }
 
         private void ClearTextFields()
@@ -125,6 +140,7 @@ namespace LimsRedo.Views
                         break;
                 }
                 controller.EnterData(sda);
+                ClearTextFields();
             }
             else
             {
@@ -136,38 +152,29 @@ namespace LimsRedo.Views
 
         private bool InputValueIsCompatible()
         {
-            bool compatible = true;
-            if(!controller.CanConvertToDouble(ConcentrationText.Text)|| !controller.CanConvertToDouble(VolumeText.Text))
+            if(!controller.CanConvertToDouble(ConcentrationText.Text) || !controller.CanConvertToDouble(VolumeText.Text))
             {
-                compatible = false;
+                return false;
             }
             if (sampleType == 1 || sampleType == 3)
             {
-                if(!controller.CanConvertToDouble(SpecialText1.Text)|| !controller.CanConvertToDouble(SpecialText2.Text))
+                if(!controller.CanConvertToDouble(SpecialText1.Text) || !controller.CanConvertToDouble(SpecialText2.Text))
                 {
-                    compatible = false;
+                    return false;
                 }
             }
-            return compatible;
+            return true;
         }
 
         private void SampleTypeCombobox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ShowCommonEntry();
-            SpecialLabel1.Visibility = Visibility.Visible;
-            SpecialLabel2.Visibility = Visibility.Visible;
-            SpecialText1.Visibility = Visibility.Visible;
-            SpecialText2.Visibility = Visibility.Visible;
-            if(sampleType != 2)
-            {
-                SpecialLabel3.Visibility = Visibility.Hidden;
-                SpecialText3.Visibility = Visibility.Hidden;
-            }
-            else
-            {
-                SpecialLabel3.Visibility = Visibility.Visible;
-                SpecialText3.Visibility = Visibility.Visible;
-            }
+            AdaptInterfaceToSampleType();
+            ClearTextFields();
+        }
+
+        private void MenuBtn_Click(object sender, RoutedEventArgs e)
+        {
+            PageSwitcher.Switch(new MainMenuView());
         }
     }
 }
