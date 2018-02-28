@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace LimsRedo.ViewModels
 {
-    public class MainViewModel
+    public class MainViewModel 
     {
         Controller controller = new Controller();
+        SearchParameters sp = new SearchParameters();
+        
+
+
+        public void OpenGetDataView()
+        {
+
+        }
+
+        public void OpenEnterDataView()
+        {
+
+        }
     }
 }

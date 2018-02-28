@@ -56,11 +56,15 @@
     </ApplicationDefinition>
     <Compile Include="Models\SampleDataAttributes.cs" />
     <Compile Include="Models\SearchParameters.cs" />
-    <Page Include="Views\EnterDataWindow.xaml">
+    <Page Include="Views\EnterDataView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\GetDataWindow.xaml">
+    <Page Include="Views\GetDataView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\MainMenuView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -75,14 +79,19 @@
     <Compile Include="Models\Controller.cs" />
     <Compile Include="Models\DatabaseReader.cs" />
     <Compile Include="Models\DatabaseWriter.cs" />
+    <Compile Include="PageSwitcher.cs" />
+    <Compile Include="Switcher.cs" />
     <Compile Include="ViewModels\EnterDataViewModel.cs" />
     <Compile Include="ViewModels\GetDataViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />
-    <Compile Include="Views\EnterDataWindow.xaml.cs">
-      <DependentUpon>EnterDataWindow.xaml</DependentUpon>
+    <Compile Include="Views\EnterDataView.xaml.cs">
+      <DependentUpon>EnterDataView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\GetDataWindow.xaml.cs">
-      <DependentUpon>GetDataWindow.xaml</DependentUpon>
+    <Compile Include="Views\GetDataView.xaml.cs">
+      <DependentUpon>GetDataView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\MainMenuView.xaml.cs">
+      <DependentUpon>MainMenuView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

@@ -1,5 +1,4 @@
 ﻿using LimsRedo.ViewModels;
-using LimsRedo.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +14,37 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LimsRedo
+namespace LimsRedo.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for EnterDataView.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class EnterDataView : UserControl
     {
-        public MainWindow()
+        
+        public EnterDataView()
         {
             InitializeComponent();
-            Switcher.mainWindow = this;
-            Switcher.Switch(new MainMenuView());
         }
 
-        public void Navigate(UserControl nextPage)
+        private void AtacCombo_Selected(object sender, RoutedEventArgs e)
         {
-            this.Content = nextPage;
+
         }
 
+        private void ChipCombo_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void HiCombo_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void RnaCombo_Selected(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -13,5 +13,10 @@ namespace LimsRedo.ViewModels
         {
             mvm = _mvm;
         }
+
+        public void BackToMenu()
+        {
+
+        }
     }
 }

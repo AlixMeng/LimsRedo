@@ -10,25 +10,29 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace LimsRedo
+namespace LimsRedo.Views
 {
     /// <summary>
-    /// Interaction logic for GetDataWindow.xaml
+    /// Interaction logic for MainMenuView.xaml
     /// </summary>
-    public partial class GetDataWindow : Window
+    public partial class MainMenuView : UserControl
     {
-        public GetDataWindow()
+        public MainMenuView()
         {
             InitializeComponent();
         }
 
-        private void SearchBtn_Click(object sender, RoutedEventArgs e)
+        private void EnterDataBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            Switcher.Switch(new EnterDataView());
         }
 
-        
+        private void GetDataBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Switcher.Switch(new GetDataView());
+        }
     }
 }
