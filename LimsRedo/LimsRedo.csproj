@@ -61,7 +61,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\GetDataView.xaml">
+    <Page Include="Views\SearchDataView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -82,12 +82,12 @@
     <Compile Include="Models\DatabaseWriter.cs" />
     <Compile Include="Models\StringToDouble.cs" />
     <Compile Include="PageSwitcher.cs" />
-    <Compile Include="ViewModels\EnterDataViewModel.cs" />
+    <Compile Include="ViewModels\Class1.cs" />
     <Compile Include="Views\EnterDataView.xaml.cs">
       <DependentUpon>EnterDataView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\GetDataView.xaml.cs">
-      <DependentUpon>GetDataView.xaml</DependentUpon>
+    <Compile Include="Views\SearchDataView.xaml.cs">
+      <DependentUpon>SearchDataView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\MainMenuView.xaml.cs">
       <DependentUpon>MainMenuView.xaml</DependentUpon>
@@ -123,5 +123,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

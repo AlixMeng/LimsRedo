@@ -55,11 +55,11 @@ namespace LimsRedo
                     cmd.Parameters.Add(new SqlParameter("@Date_Of_Addition", da.DateOfAddition));
 
                     cmd.ExecuteNonQuery();
-                    con.Close();//needed? 
+                    con.Close(); 
                 }
                 catch (SqlException e)
                 {
-                    MessageBox.Show(e.Message.ToString()); //should not do this
+                    MessageBox.Show(e.Message.ToString()); //should not do this                 fixit!!!!!!!!!!!
                 }
             }
         }

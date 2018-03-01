@@ -144,9 +144,9 @@ namespace LimsRedo.Views
             }
             else
             {
-                //displayMsgAboutFixingShits!      another class for error msgs '??
+                // DisplayMsgAboutFixingShits!      another class for error msgs '??
                 MessageBox.Show("Number fields are not in the correct format");
-                //temp
+                //Temp, change this!
             }
         }
 

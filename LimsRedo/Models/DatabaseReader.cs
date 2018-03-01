@@ -9,10 +9,10 @@ namespace LimsRedo
     public class DatabaseReader
     {
         private static string connectionString =
-                "Server=EALSQL1.eal.local; Database= DB2017_C08; User Id=USER_C08; Password=SesamLukOp_08";
+        "Server=EALSQL1.eal.local; Database= DB2017_C08; User Id=USER_C08; Password=SesamLukOp_08";
 
         private List<string> SampleType = new List<string>();
-        //find out the spParam..
+
         public List<string> GetSampleByValue(string searchValue, string spParameter)
         {
             List<string> ret = new List<string>();
@@ -98,7 +98,8 @@ namespace LimsRedo
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
-                        while (reader.Read())//runs through this loop for any sample id relevant to the value looked for
+                        //Runs through this loop for any sample id relevant to the value the user looked for.
+                        while (reader.Read())
                         {
                             if (!sampleID.Contains(int.Parse(reader["Sample_ID"].ToString())))
                             {
@@ -110,7 +111,7 @@ namespace LimsRedo
                 }
                 catch (SqlException e)
                 {
-                    MessageBox.Show(e.Message.ToString());
+                    MessageBox.Show(e.Message.ToString());//    fixit!!!!!!!!!!!!!!!!!!!!!!!
                 }
             }
             return sampleID;
@@ -131,7 +132,7 @@ namespace LimsRedo
                     SqlDataReader reader = cmd.ExecuteReader();
                     if (reader.HasRows)
                     {
-                        while (reader.Read()) //problem with getting wrong data when searching by value
+                        while (reader.Read())
                         {
                             #region reader to string                           
                             string GenomeType = reader["Genome_Type"].ToString();

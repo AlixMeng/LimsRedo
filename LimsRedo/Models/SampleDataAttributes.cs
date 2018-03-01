@@ -13,17 +13,17 @@
         public string Initials { get; set; }
         public string PIValue { get; set; }
         public string DateOfAddition { get; set; }
-        // ATAC-Seq Data
+        // ATAC-Seq specific Data
         public double ATACTransposaseUnit { get; set; }
         public double ATACPCRCycles { get; set; }
-        // ChIP-Seq data
+        // ChIP-Seq specific data
         public string ChIPAntibody { get; set; }
         public string ChIPAntibodyLot { get; set; }
         public string ChIPAntibodyCatalogueNumber { get; set; }
-        //Hi-C Data
+        // Hi-C specific Data
         public double HIRestrictionEnzyme { get; set; }
         public double HIPCRCycles { get; set; }
-        //RNA-Seq
+        // RNA-Seq specific Data
         public string RNAPrepType { get; set; }
         public string RNARIN { get; set; }
     }

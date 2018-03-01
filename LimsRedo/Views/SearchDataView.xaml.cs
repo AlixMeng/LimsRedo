@@ -29,7 +29,6 @@ namespace LimsRedo.Views
         {
             string searchParameter = string.Empty;
             string searchValue = SearchValueTxt.Text;
-            //int idValue = Convert.ToInt32(searchValue);//make great again
             List<string> resultList = new List<string>();
 
             switch (comboboxValue)
@@ -59,7 +58,8 @@ namespace LimsRedo.Views
 
             if(searchParameter == "ID")
             {
-                if (controller.CanConvertToDouble(searchValue))//if it converts to double it converts to int.
+                //if it converts to double it converts to int.
+                if (controller.CanConvertToDouble(searchValue))
                 {
                     resultList = controller.GetSampleByID(Convert.ToInt32(searchValue));
                 }

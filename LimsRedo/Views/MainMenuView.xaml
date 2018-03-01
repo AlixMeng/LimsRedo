@@ -21,7 +21,5 @@
         <Label Grid.Row="0" Grid.Column="1" Content="LIMS" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="36"/>
         <Button x:Name="EnterDataBtn" Grid.Row="1" Grid.Column="1" Content="Enter Data" Margin="0,5" FontSize="18" Click="EnterDataBtn_Click"/>
         <Button x:Name="GetDataBtn" Grid.Row="2" Grid.Column="1" Content="Search Data" Margin="0,5" FontSize="18"  Click="GetDataBtn_Click"/>
-        <Label Grid.Row="2" Grid.Column="2" Content="LIMS by Jonas, Hafsteinn,&#xA; Falke, No copy pasta plz" HorizontalAlignment="Right" FontSize="12" Margin="2" VerticalContentAlignment="Bottom"  />
-
     </Grid>
 </UserControl>

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 
 namespace LimsRedo
 {
@@ -25,10 +21,12 @@ namespace LimsRedo
         {
             return databaseReader.GetSampleByID(sampleID);
         }
+
         public bool CanConvertToDouble(string str)
         {
             return StringToDouble.CanConvertToDouble(str);
         }
+
         public double ConvertToDouble(string str)
         {
             return StringToDouble.ConvertToDouble(str);
