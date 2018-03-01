@@ -45,12 +45,12 @@ namespace LimsRedo
                     }
                     else
                     {
-                        MessageBox.Show("Sample not found!");
+                        MessageBox.Show("Sample not found!");/////////-----------------------
                     }
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine(e.Message);
+                    MessageBox.Show(e.Message);////////////---------------------------------
                 }
             }
             List<string> ret = new List<string>();
@@ -193,7 +193,7 @@ namespace LimsRedo
                 }
                 catch (SqlException e)
                 {
-                    Console.WriteLine(e.Message);
+                    MessageBox.Show(e.Message);///////7----------------------------------------
                 }
             }
             return ret;
