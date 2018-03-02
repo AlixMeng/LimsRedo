@@ -16,11 +16,11 @@ namespace LimsRedo
         public List<string> GetSampleByValue(string searchValue, string spParameter)
         {
             List<string> ret = new List<string>();
-            string storedProcedure = GetStoredProcedureByParameter(searchValue, spParameter);
+            string storedProcedure = GetStoredProcedureByParameter(spParameter);
             List<int> sampleID = GetSampleTypeAndID(searchValue, spParameter, storedProcedure);
             for (int i = 0; i < sampleID.Count; i++)
             {
-                ret.Add(GetSampleWithSampleTypeAndId(SampleType[i], sampleID[i]));
+                ret.Add(GetSampleWithSampleTypeAndID(SampleType[i], sampleID[i]));
             }
             return ret;
         }
@@ -45,7 +45,7 @@ namespace LimsRedo
                     }
                     else
                     {
-                        MessageBox.Show("Sample not found!");/////////-----------------------
+                        MessageBox.Show("Sample not found!");/////////-----------------------delegates instead ?
                     }
                 }
                 catch (SqlException e)
@@ -54,10 +54,10 @@ namespace LimsRedo
                 }
             }
             List<string> ret = new List<string>();
-            ret.Add(GetSampleWithSampleTypeAndId(sampleType, sampleID));
+            ret.Add(GetSampleWithSampleTypeAndID(sampleType, sampleID));
             return ret;
         }
-        private string GetStoredProcedureByParameter(string value, string spParameter)
+        private string GetStoredProcedureByParameter(string spParameter)
         {
             string storedProcedure = string.Empty;
             switch (spParameter)
@@ -116,7 +116,7 @@ namespace LimsRedo
             }
             return sampleID;
         }
-        private string GetSampleWithSampleTypeAndId(string sampleType, int sampleID)
+        private string GetSampleWithSampleTypeAndID(string sampleType, int sampleID)
         {
             string nl = "\n";
             string ret = string.Empty;
